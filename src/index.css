@@ -1,0 +1,175 @@
+/* Google Font: Tajawal */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Global Reset ─────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background: #F0F4FA;
+  color: #1a1a2e;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Custom Scrollbar ─────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #E8EFF9; }
+::-webkit-scrollbar-thumb { background: #1B3A6B; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #E8A020; }
+
+/* ── Audit Stamp ──────────────────────────── */
+.audit-stamp {
+  @apply text-xs text-gray-400 mt-1 select-none;
+}
+.audit-stamp strong {
+  @apply text-gray-600 font-medium;
+}
+
+/* ── Sidebar Glass Effect ─────────────────── */
+.sidebar-nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.sidebar-nav-item:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.sidebar-nav-item.active {
+  color: #fff;
+  background: linear-gradient(135deg, #E8A020, #F5B83D);
+  box-shadow: 0 4px 15px rgba(232, 160, 32, 0.35);
+  font-weight: 700;
+}
+.sidebar-nav-item.active svg { opacity: 1; }
+
+/* ── Card Base ────────────────────────────── */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(27,58,107,0.06), 0 4px 12px rgba(27,58,107,0.04);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card:hover { box-shadow: 0 4px 20px rgba(27,58,107,0.12); }
+
+/* ── Stat Cards ───────────────────────────── */
+.stat-card {
+  border-radius: 16px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.stat-card:hover { transform: translateY(-3px); }
+.stat-card::after {
+  content: '';
+  position: absolute;
+  top: -20px; right: -20px;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+}
+
+/* ── Input Focus ──────────────────────────── */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #1B3A6B;
+  box-shadow: 0 0 0 3px rgba(27,58,107,0.12);
+}
+
+/* ── Page Header ──────────────────────────── */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0F2444;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ── Badges ───────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* ── Progress Bar ─────────────────────────── */
+.progress-track {
+  height: 6px;
+  background: #E8EFF9;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Table ────────────────────────────────── */
+.data-table th {
+  background: #F0F4FA;
+  color: #1B3A6B;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 12px 16px;
+}
+.data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #F0F4FA;
+  font-size: 0.875rem;
+  color: #374151;
+}
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr:hover td { background: #FAFCFF; }
+
+/* ── Animations ───────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up { animation: fadeInUp 0.4s ease forwards; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, #E8EFF9 25%, #F5F8FF 50%, #E8EFF9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+/* ── Print ────────────────────────────────── */
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+}
+.print-only { display: none; }

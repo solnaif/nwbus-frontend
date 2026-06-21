@@ -1,0 +1,143 @@
+export default {
+  // General
+  app_name: 'نورث وست باص',
+  login: 'تسجيل الدخول',
+  logout: 'تسجيل الخروج',
+  username: 'اسم المستخدم',
+  password: 'كلمة المرور',
+  submit: 'إرسال',
+  save: 'حفظ',
+  cancel: 'إلغاء',
+  edit: 'تعديل',
+  delete: 'حذف',
+  print: 'طباعة',
+  search: 'بحث',
+  filter: 'تصفية',
+  all: 'الكل',
+  yes: 'نعم',
+  no: 'لا',
+  loading: 'جار التحميل...',
+  error: 'خطأ',
+  success: 'تم بنجاح',
+  required: 'مطلوب',
+  created_by: 'أُدخل بواسطة',
+  created_at: 'تاريخ الإدخال',
+  updated_by: 'عُدِّل بواسطة',
+  updated_at: 'تاريخ التعديل',
+
+  // Navigation
+  nav_home: 'الرئيسية',
+  nav_transportation: 'الترحيل',
+  nav_lost_found: 'الموجودات',
+  nav_sales: 'الإيرادات',
+  nav_reports: 'التقارير',
+  nav_users: 'إدارة الموظفين',
+  nav_stations: 'المحطات',
+  nav_settings: 'الإعدادات',
+
+  // Roles
+  role_station_employee: 'موظف محطة',
+  role_accountant: 'محاسب',
+  role_station_admin: 'أدمن محطة',
+  role_general_admin: 'أدمن عام',
+
+  // Station types
+  station_main: 'محطة رئيسية',
+  station_transit: 'محطة مرور',
+
+  // Bus types
+  bus_VIP: 'VIP',
+  bus_WCH: 'ذوي الاحتياجات (WCH)',
+  bus_Standard: 'عادي',
+  bus_Qaid: 'قائد',
+
+  // Departure accuracy
+  accuracy_Early: 'مبكر',
+  accuracy_OnTime: 'في الوقت',
+  accuracy_NotOnTime: 'غير في الوقت',
+  accuracy_Delayed: 'متأخر',
+
+  // Trip statuses
+  status_Normal: 'طبيعي',
+  status_Accident_other: 'حادث بين المركبات الأخرى',
+  status_Health: 'الصحة (السائق/الركاب)',
+  status_Misbehavior: 'سوء سلوك الركاب',
+  status_Police: 'سيطرة الشرطة',
+  status_Traffic: 'الازدحام المروري',
+  status_Weather: 'طقس',
+  status_Accident_NWB: 'حادث مع حافلة NWB',
+  status_Malfunction_inside: 'عطل داخل المحطة',
+  status_Malfunction_outside: 'عطل خارج المحطة',
+
+  // Transportation
+  trip_number: 'رقم الرحلة',
+  from_station: 'محطة الانطلاق',
+  to_station: 'محطة الوصول',
+  scheduled_departure: 'وقت المغادرة المجدول',
+  actual_departure: 'وقت المغادرة الفعلي',
+  delay_minutes: 'التأخير (دقيقة)',
+  bus_number: 'رقم الحافلة',
+  passenger_count: 'عدد المسافرين',
+  missed_count: 'عدد المتخلفين',
+  operational_status: 'الحالة التشغيلية',
+  trip_notes: 'ملاحظة سير الرحلة',
+  extra_trip: 'رحلة إضافية (RF)',
+  cancel_trip: 'إلغاء رحلة',
+  departure_table: 'جدول المغادرة',
+  arrival_table: 'جدول الوصول',
+  today_stats: "إحصائيات اليوم",
+
+  // Shifts
+  shift: 'الوردية',
+  shift_A: 'وردية A',
+  shift_B: 'وردية B',
+  shift_C: 'وردية C',
+
+  // Sales
+  cash_amount: 'مبيعات كاش',
+  mada_amount: 'مبيعات مدى',
+  mada_network_ref: 'رقم شبكة مدى',
+  visa_amount: 'مبيعات فيزا',
+  mastercard_amount: 'مبيعات ماستركارد',
+  other_amount: 'مبيعات أخرى',
+  balance_ref: 'رقم الموازنة',
+  total_actual: 'إجمالي المبيعات',
+  total_expected: 'المبلغ المتوقع',
+  surplus_deficit: 'فائض / عجز',
+  bank_deposit: 'المبلغ المودع بالبنك',
+  confirm_record: 'تأكيد السجل',
+  confirmed: 'مؤكد',
+  not_confirmed: 'غير مؤكد',
+
+  // Lost & Found
+  item_description: 'وصف الغرض',
+  item_type: 'نوع الغرض',
+  found_date: 'تاريخ الإيجاد',
+  found_location: 'مكان الإيجاد',
+  owner_name: 'اسم المالك',
+  owner_contact: 'تواصل المالك',
+  resolved_date: 'تاريخ الحل',
+  status_unclaimed: 'لم يُستلم',
+  status_claimed: 'استُلم',
+  status_disposed: 'تم التخلص',
+
+  // Reports
+  report_daily: 'يومي',
+  report_weekly: 'أسبوعي',
+  report_monthly: 'شهري',
+  report_quarterly: 'ربع سنوي',
+  report_semi_annual: 'نصف سنوي',
+  report_annual: 'سنوي',
+  date_from: 'من تاريخ',
+  date_to: 'إلى تاريخ',
+
+  // Users
+  full_name: 'الاسم الكامل',
+  station: 'المحطة',
+  role: 'الصلاحية',
+  language: 'اللغة',
+  active: 'نشط',
+  inactive: 'غير نشط',
+  last_login: 'آخر تسجيل دخول',
+  never_logged_in: 'لم يسجل دخول',
+}
